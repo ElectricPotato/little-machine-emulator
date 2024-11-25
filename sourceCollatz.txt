@@ -1,0 +1,19 @@
+#generate the Collatz sequence (also known as the 3n+1 sequence)
+
+MOV n 19 #initial value
+
+OUT n
+loop:
+    MOD t n 2 #t (temporary value) is 1 if n is odd, 0 if even
+    JEZ t endif #if n is odd, n = 3n + 1
+        MUL n n 3 
+        ADD n n 1
+        OUT n
+    endif:
+
+    #n is always divisible by 2 after an 3n+1 step, so divide it
+    DIV n n 2
+    OUT n
+
+SUB t n 1 #if n > 1, repeat
+JGZ t loop

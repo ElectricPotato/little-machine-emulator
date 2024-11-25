@@ -1,0 +1,21 @@
+
+# Equivalent code in Python:
+# a=1
+# b=1
+# for i in range(0, 10, 2):
+#     print(a)
+#     a+=b
+#     print(b)
+#     b+=a
+
+MOV A 1
+MOV B 1
+MOV i 10 #print 10 Fibbonaci numbers
+loop:
+    OUT A
+    ADD A A B
+    OUT B
+    ADD B B A
+
+    SUB i i 2
+    JGZ i loop

@@ -1,0 +1,29 @@
+#Python version:
+#for i in range(1, 100):
+#    prime = True
+#    for divisor in range(2, i):
+#        if i % divisor == 0:
+#            prime = False
+#    if prime:
+#        print(i)
+
+MOV i 1
+loopMain:
+    MOV divisor 2
+
+    SUB t i divisor
+    JEZ t loopEnd
+    loopDivisor:
+        MOD t i divisor
+        JEZ t notPrime
+
+        ADD divisor divisor 1
+    SUB t i divisor
+    JGZ t loopDivisor
+    loopEnd:
+    OUT i #output number if no the divisor loop completed without finding a divisor
+
+    notPrime:
+    ADD i i 1
+SUB t 100 i
+JGZ t loopMain

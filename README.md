@@ -77,3 +77,17 @@ loop:
  - A variable is defined when it appears as the destination of instructions (in the case it hasn't been defined before)
 
 No syntax or other error messages implemented for now, like when a variable is used before being defined/set to a value. Python just gives an exception instead.
+
+### Output
+Output of the 3 included example programs
+```
+running file sourceFibbonacci.txt
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 
+Program END
+running file sourceCollatz.txt
+19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1, 
+Program END
+running file sourcePrimes.txt
+1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 
+Program END
+```
